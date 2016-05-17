@@ -7,9 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset='UTF-8' />
   <meta name='author' content='Samuel Cupidon' />
-  <link href='https://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css' />
+  <style>
+  .squigglevision {
+    filter:url(#turbulence-1);
+  }
+</style>
   <link rel='stylesheet' href='./css/main.css' />
-</head>
+  </head>
 
 <body class='squigglevision'>
   <h1 id='title'>Tic Tac Toe</h1>
@@ -84,17 +88,17 @@
       </div><!--.modal-footer-->
     </div><!--.modal-content-->
   </div><!--#gameOverModal-->
-  <svg width="0px" height="0px" viewBox="0 0 200 200">
+<svg width="0px" height="0px" viewBox="0 0 200 200">
     You have a browser which does not support the HTML5 SVG element. Choose a better browser.
 <defs>
   <filter id="turbulence-1">
     <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" seed="46" numOctaves="1">
-      <animate attributeName="baseFrequency" values="0.01; 0.015; 0.02; 0.025; 0.03; 0.025; 0.02; 0.015; 0.01" repeatCount="indefinite" dur="5s"/>
+      <animate attributeName="baseFrequency" values="0.01; 0.015; 0.02; 0.025; 0.03; 0.025; 0.02; 0.015; 0.01" repeatCount="indefinite" dur="5s" />
       </feTurbulence>
     <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="10"/>
   </filter>
   </defs>
 </svg>
-<script src='./js/main.js'></script>
+  <script src='./js/main.js'></script>
 </body>
 </html>
