@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+
+<head>
+  <title>Tic Tac Toe</title>
+  <meta name='description' content='Play a game of Tic-Tac-Toe against the computer, now in glorious Squigglevision!' />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset='UTF-8' />
+  <meta name='author' content='Samuel Cupidon' />
+  <link href='https://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css' />
+  <link rel='stylesheet' href='./css/main.css' />
+</head>
+
+<body class='squigglevision'>
+  <h1 id='title'>Tic Tac Toe</h1>
+  <h3>Brought to you in Squigglevision<sup><small>TM</small></sup>!</h3>
+  <audio id='gameMusic' loop autoplay>
+    <source src='./sounds/greensleeves.mp3' type='audio/mpeg'>
+  </audio>
+<canvas id='canvas'>
+  You have a very old browser which does not support the HTML5 canvas element. You really ought to upgrade.
+  </canvas>
+  <span id='newGame'>
+    <button id='newGameButton'>
+      <span id='newLabel'>New</span>
+      <br>
+      <span id='gameLabel'>Game</span>
+    </button>
+    <button id='optionsButton'>
+      <span id='optionsLabel'>Options</span>
+    </button>
+  </span><!--#newGame-->
+   <h1 id='score'>Player:
+     <span id='playerScore'>0</span>
+     Computer:
+     <span id='computerScore'>0</span>
+     Tie:
+     <span id='tieScore'>0</span>
+  </h1><!--#score-->
+  <div id='myModal' class='modal'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h1>Options<span id='optionsClose' class='close'>&times;</span></h1>
+      </div><!--.modal-header-->
+      <div class='modal-body' id='optionsList'>
+        <div>Player Token
+          <label><input type='radio' name='playerToken' value='X'> X </label>
+          <label><input type='radio' name='playerToken' value='O'> O </label>
+        </div>
+        <div>First player
+          <label><input type='radio' name='firstPlayer' value='Player'> Player </label>
+          <label><input type='radio' name='firstPlayer' value='Computer'> Computer </label>
+        </div>
+        <div>Difficulty
+          <label><input type='radio' name='difficulty' value='easy'> easy </label>
+          <label><input type='radio' name='difficulty' value='medium'> medium </label>
+        </div>
+        <div>Music
+        <label><input type='radio' name='music' value='off'> off</label>
+        <label><input type='radio' name='music' value=on> on</label>
+          </div>
+        <div>Squigglevision
+        <label><input type='radio' name='squigglevision' value='off'> off</label>
+        <label><input type='radio' name='squigglevision' value='on'> on</label>
+        </div>
+      </div><!--.modal-body-->
+      <br>
+      <div class='modal-footer text-center'>
+        Tip: You can save your game by right clicking on the tic-tac-toe board and selecting "Save Image As".
+      </div><!--.modal-footer-->
+    </div><!--.modal-content-->
+  </div><!--#myModal-->
+  <div id='gameOverModal' class='modal'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+      <h1 id='gameOverHeader'>Game Over<span id='gameOverClose' class='close'>&times;</span></h1>
+      </div><!--.modal-header-->
+      <div class='modal-body'>
+        <div id='gameOverText'></div>
+      </div><!--.modal-body-->
+      <div class='modal-footer'>
+        <div id='gameOverModalButtons'><button id='gameOverNewGameButton' class='modalButton'>New Game</button>
+          <button id='gameOverQuitButton' class='modalButton'>Quit</button>        </div>
+      </div><!--.modal-footer-->
+    </div><!--.modal-content-->
+  </div><!--#gameOverModal-->
+  <svg width="0px" height="0px" viewBox="0 0 200 200">
+    You have a browser which does not support the HTML5 SVG element. Choose a better browser.
+<defs>
+  <filter id="turbulence-1">
+    <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" seed="46" numOctaves="1">
+      <animate attributeName="baseFrequency" values="0.01; 0.015; 0.02; 0.025; 0.03; 0.025; 0.02; 0.015; 0.01" repeatCount="indefinite" dur="5s"/>
+      </feTurbulence>
+    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="10"/>
+  </filter>
+  </defs>
+</svg>
+<script src='./js/main.js'></script>
+</body>
+</html>
