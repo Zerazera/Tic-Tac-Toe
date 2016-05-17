@@ -12,10 +12,6 @@ body {
   text-align:center;
 }
 
-.squigglevision {
-  filter:url('#turbulence-1');
-}
-
 #canvas {
   display:inline;
   cursor:pointer;
@@ -155,8 +151,6 @@ button:hover {
   box-shadow:0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
   -webkit-animation-name:animatetop;
   -webkit-animation-duration:.4s;
-  -moz-animation-name:animatetop;
-  -moz-animation-duration:.4s;
   animation-name:animatetop;
   animation-duration:.4s;
 }
